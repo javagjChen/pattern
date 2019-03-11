@@ -3,7 +3,7 @@ package com.cgj.pattern.prototype;
 import java.util.Date;
 
 /**
- * Created by Tom.
+ * copy from Tom.
  */
 public class Monkey {
     public int height;
