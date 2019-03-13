@@ -9,6 +9,8 @@ public class AfterProtoTest {
         reResult.setCallNum("123456");
         reResult.setContent("asdfasfasf");
 
+
+        //没有优化之前，没增加一个字段都需要修改genericFrom方法
         ReResultVo reResultVo = ReResultVo.genericFrom(reResult);
 
         System.out.println(reResultVo.toString());
