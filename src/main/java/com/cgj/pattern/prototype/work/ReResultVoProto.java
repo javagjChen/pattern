@@ -3,6 +3,7 @@ package com.cgj.pattern.prototype.work;
 
 
 
+import com.cgj.pattern.prototype.JinGuBang;
 import org.springframework.beans.BeanUtils;
 
 import java.lang.reflect.InvocationTargetException;
@@ -47,6 +48,16 @@ public class ReResultVoProto {
     private String reUserName = "";
     private String reUserAccount = "";
 
+
+    private JinGuBang jinGuBang;
+
+    public JinGuBang getJinGuBang() {
+        return jinGuBang;
+    }
+
+    public void setJinGuBang(JinGuBang jinGuBang) {
+        this.jinGuBang = jinGuBang;
+    }
 
     public Long getId() {
         return id;
@@ -344,6 +355,7 @@ public class ReResultVoProto {
             return null;
         }
         ReResultVo vo = new ReResultVo();
+
         BeanUtils.copyProperties(reResult,vo);
         return vo;
 

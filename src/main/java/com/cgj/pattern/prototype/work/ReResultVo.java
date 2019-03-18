@@ -1,7 +1,10 @@
 package com.cgj.pattern.prototype.work;
 
+import com.cgj.pattern.prototype.JinGuBang;
+
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Set;
 
 public class ReResultVo implements Serializable{
 	/**
@@ -44,7 +47,8 @@ public class ReResultVo implements Serializable{
 	  private Long reUserId = null;
 	  private String reUserName = "";
 	  private String reUserAccount = "";
-	  
+
+	  private Set<JinGuBang> jinGuBang;
 
 	public Long getId() {
 		return id;
@@ -326,7 +330,13 @@ public class ReResultVo implements Serializable{
 		this.reUserAccount = reUserAccount;
 	}
 
+	public Set<JinGuBang> getJinGuBang() {
+		return jinGuBang;
+	}
 
+	public void setJinGuBang(Set<JinGuBang> jinGuBang) {
+		this.jinGuBang = jinGuBang;
+	}
 
 	public static ReResult genericFromVo(ReResultVo vo){
 		if (null==vo) {

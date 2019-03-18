@@ -2,12 +2,15 @@ package com.cgj.pattern.prototype.work;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
+import com.cgj.pattern.prototype.JinGuBang;
 import org.hibernate.annotations.GenericGenerator;
 
 
@@ -62,6 +65,7 @@ public class ReResult implements java.io.Serializable {
   private String reUserName = "";
   private String reUserAccount = "";
 
+  private Set<JinGuBang> jinGuBang;
 
   /** default constructor */
   public ReResult() {
@@ -406,6 +410,14 @@ public class ReResult implements java.io.Serializable {
 
   public void setReUserAccount(String reUserAccount) {
     this.reUserAccount = reUserAccount;
+  }
+
+  public Set<JinGuBang> getJinGuBang() {
+    return jinGuBang;
+  }
+
+  public void setJinGuBang(Set<JinGuBang> jinGuBang) {
+    this.jinGuBang = jinGuBang;
   }
 
   @Override
